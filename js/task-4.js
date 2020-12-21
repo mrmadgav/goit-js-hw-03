@@ -2,16 +2,23 @@
 // Напиши функцию countTotalSalary(employees) принимающую объект зарплат. Функция считает общую сумму зарплаты работников и возращает ее. Каждое поле объекта, передаваемого в функцию, имеет вид "имя":"зарплата".
 
 const countTotalSalary = function (employees) {
-  // твой код
-  const Salary = Object.values(employees);
-
   let totalSalary = 0;
-
-  for (const value of Salary) {
-    totalSalary += value;
+  for (let key in employees) {
+    totalSalary += employees[key];
   }
   return totalSalary;
 };
+
+// твой код
+//   const Salary = Object.values(employees);
+
+//   let totalSalary = 0;
+
+//   for (const value of Salary) {
+//     totalSalary += value;
+//   }
+//   return totalSalary;
+// };
 
 /*
  * Вызовы функции для проверки работоспособности твоей реализации.

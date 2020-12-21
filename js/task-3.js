@@ -4,12 +4,12 @@ const findBestEmployee = function (employees) {
   // твой код
   const employee = Object.keys(employees);
   const values = Object.values(employees);
-
-  const maxTasks = values.indexOf(Math.max(...values));
-  const bestEmployee = employee[maxTasks];
-  return bestEmployee;
+  for (const key in values) {
+    const maxTasks = values.indexOf(Math.max(...values));
+    const bestEmployee = employee[maxTasks];
+    return bestEmployee;
+  }
 };
-
 /*
  * Вызовы функции для проверки работоспособности твоей реализации.
  */

@@ -5,8 +5,8 @@
  * Можно положить либо снять деньги со счета.
  */
 const Transaction = {
-  DEPOSIT: 'deposit',
-  WITHDRAW: 'withdraw',
+  DEPOSIT: "deposit",
+  WITHDRAW: "withdraw",
 };
 
 /*
@@ -24,7 +24,10 @@ const account = {
    * Метод создает и возвращает объект транзакции.
    * Принимает сумму и тип транзакции.
    */
-  createTransaction(amount, type) {},
+  createTransaction(amount, type) {
+    const unitTransaction = (type) => (type === "withdraw" ? balance += amount : type === "deposit" balance -= amount);
+    console.log(unitTransaction);
+  },
 
   /*
    * Метод отвечающий за добавление суммы к балансу.
@@ -32,7 +35,10 @@ const account = {
    * Вызывает createTransaction для создания объекта транзакции
    * после чего добавляет его в историю транзакций
    */
-  deposit(amount) {},
+  deposit(amount) {
+    createTransaction();
+    push.transactions()
+  },
 
   /*
    * Метод отвечающий за снятие суммы с баланса.
