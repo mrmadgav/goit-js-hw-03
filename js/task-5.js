@@ -11,9 +11,6 @@ const getAllPropValues = function (arr, prop) {
   // твой код
   let output = [];
   for (let i = 0; i < arr.length; ++i) output.push(arr[i][prop]);
-  
-  arr[i][prop ? output.push(arr[i][prop] : "";
-    
 
   if (output.includes(undefined)) {
     return "[]";
