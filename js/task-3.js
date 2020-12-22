@@ -2,13 +2,17 @@
 
 const findBestEmployee = function (employees) {
   // твой код
-  const employee = Object.keys(employees);
-  const values = Object.values(employees);
-  for (const key in values) {
-    const maxTasks = values.indexOf(Math.max(...values));
-    const bestEmployee = employee[maxTasks];
-    return bestEmployee;
-  }
+  // console.log(employees);
+  let values = Object.values(employees);  
+  return Object.keys(employees)[values.indexOf(Math.max(...values))];
+
+  // const employee = Object.keys(employees);
+  // const values = Object.values(employees);
+  // for (key in employees) {
+  //   console.log(employees[key] );
+  // const maxTasks = values.indexOf(Math.max(...values));
+  // return employee[maxTasks];
+  // }
 };
 /*
  * Вызовы функции для проверки работоспособности твоей реализации.
