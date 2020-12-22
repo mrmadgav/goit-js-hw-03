@@ -5,10 +5,15 @@ const findBestEmployee = function (employees) {
   // console.log(employees);
   // let values = Object.values(employees);
   // return Object.keys(employees)[values.indexOf(Math.max(...values))];
-  let bestEmployee;
-  for (let key in employees)
-    if (!(employees[key] <= employees[bestEmployee])) bestEmployee = key;
 
+  let bestEmployee = 0;
+  for (let key in employees)
+    if (!(employees[key] <= employees[bestEmployee])) {
+      // console.log(employees[key]);
+      // console.log(key);
+      // console.log(bestEmployee);
+      bestEmployee = key;
+    }
   return bestEmployee;
 };
 
